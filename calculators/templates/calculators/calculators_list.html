@@ -1,0 +1,17 @@
+{%extends 'base_layout.html'%}
+
+{%block content%}
+	<h1>Calculator List</h1>
+	<div class = 'calculators'>
+	{% for calc in calculator %}
+		<div class= 'calculator'>
+			<h2 >
+				<a href="{%url 'calculators:detail' slug=calc.slug%}"> 
+					{{calc.title}} 
+					<img  class="list-img" src="{{calc.thumb.url}}"/>
+				</a>
+			</h2>
+		</div>
+	{%endfor%}
+	</div>
+{%endblock%}

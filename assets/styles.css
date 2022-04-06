@@ -1,0 +1,143 @@
+body{
+	background-color: rgb(143, 143, 143);
+	background-image: url(musicbackground.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	color: #000;
+}
+
+body *{
+	font-family: Garamond, serif;
+}
+
+
+h1,h2,h3,h4,h5{
+	font-weight: normal;
+	margin: 0;
+}
+
+a, a:hover,a:visited{
+	color: #000;
+	text-decoration: none;
+}
+
+.wrapper{
+	max-width: 950px;
+	margin: 0 auto;
+}
+
+div.wrapper h1{
+	text-align: center;
+	margin: 10px auto;
+	font-size: 2.4em;
+}
+
+header{
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+	padding: 10px 0;
+}
+
+nav{
+	justify-self: end;
+	font-size:1em;
+}
+
+nav li{
+	display: inline-block;
+	margin-left: 20px;
+	margin-right: 5px;
+}
+
+nav button{
+	background: none;
+	color: #000;
+	cursor: pointer;
+	border: 0;
+	font-size:1em;
+}
+
+.clear-field button{
+	background: white;
+	color: #000;
+	cursor: pointer;
+	border: 1;
+	font-size:1em;
+	border-radius: 4px;
+	margin-top: 5px;
+}
+
+.calculators{
+	display:grid;
+	grid-template-columns:1fr 1fr 1fr;
+	grid-gap: 30px
+}
+
+.calculator{
+	padding: 10px;
+	position: relative;
+	padding-bottom:40px;
+	text-align: center;
+}
+
+.calculator h2{
+	font-size: 1.3em;
+	
+}
+
+.calc-function{
+	text-align: center;
+	font-size: 1.2em;
+	
+}
+
+.fields{
+    display:inline-block;
+	margin-left: 20px
+}
+
+.field-input{
+	text-align: center;
+}
+
+.home-txt{
+	text-align: center;
+}
+
+p.home-txt{
+	font-size: 1.5em;
+	font-style: italic;
+}
+
+.list-img{
+	margin-top: 10px
+}
+
+.site-form{
+	margin-top: 20px;
+	padding: 20px;
+	text-align: center;
+
+}
+
+a.list-link{
+	/* border: 1px solid black; */
+	/* padding: 10px; */
+	border-radius: 4px;
+}
+
+.quick-link-home{
+	text-decoration: underline;
+}
+
+li{
+	list-style-type: none;
+}
+
+.search-bar{
+	font-size: x-large;
+	text-align: center;
+	border-radius: 4px;
+	background-color: #e9e9e9;
+	
+}

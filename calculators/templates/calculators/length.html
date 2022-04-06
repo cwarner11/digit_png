@@ -1,0 +1,39 @@
+{%extends 'base_layout.html'%}
+
+{%block content%}
+
+  <div class="calc-function">
+    <img class="list-img" src="{{calcs.thumb.url}}"/>
+    <p> Type a value in the Miles or Kilometers text field</p>
+    <form>
+    <div class="fields">
+      <label>Kilometers</label>
+      <input class="field-input" id="inputKilometers" type="number" placeholder="Kilometers" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
+    </div>
+    <div class="fields">
+      <label>Miles</label>
+      <input class="field-input" id="inputMiles" type="number" placeholder="Miles" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
+    </div>
+     <div class="clear-field">
+      <button type="reset" value="reset">Reset</button>
+    </div>
+    </form>
+  </div>
+
+
+<script>
+function lengthConverter(source,valNum) {
+  valNum = parseFloat(valNum);
+  var inputKilometers = document.getElementById("inputKilometers");
+  var inputMiles = document.getElementById("inputMiles");
+  
+  if (source=="inputKilometers") {
+    inputMiles.value=(valNum*0.62137).toFixed(2);    
+  }
+  if (source=="inputMiles") {
+    inputKilometers.value=(valNum/0.62137).toFixed(2);    
+  }
+}
+</script>
+
+{%endblock%}

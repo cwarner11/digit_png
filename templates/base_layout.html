@@ -1,0 +1,38 @@
+<!-- Page Seen When logged in -->
+
+{% load static from static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Music Database</title>
+		<link rel="stylesheet" href="{%static 'styles.css'%}">
+	</head>
+	<body>
+		<header class ='wrapper'>
+			<!-- Home Button -->
+			<h1><a href="{%url 'home' %}">Home</a></h1> 
+			<nav>
+				<ul>
+					{%if user.is_authenticated%}
+					<li>
+						<form class= "logout-link" action="{%url 'accounts:logout'%}" method ='post'>
+							{%csrf_token%}
+							<!-- logout button -->
+							<button type ="submit">Logout</button>
+						</form>
+					</li>
+					<li><a class="list-link" href="{%url 'calculators:list' %}">Playlist (Maybe)</a> </li>
+					{%else %}
+					<!-- Login and Sign up buttons -->
+					<li><a href="{%url 'accounts:login'%}">Login</a> </li>
+					<li><a href="{%url 'accounts:signup'%}">Signup</a> </li>
+					{%endif%}
+				</ul>
+			</nav>
+		</header>
+		<div class= "wrapper">
+			{%block content%}
+			{%endblock%}
+		</div>
+	</body>
+</html>

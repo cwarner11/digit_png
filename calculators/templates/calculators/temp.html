@@ -1,0 +1,40 @@
+{%extends 'base_layout.html'%}
+
+{%block content%}
+
+  <div class="calc-function">
+    <img class= "list-img" src="{{calcs.thumb.url}}"/>
+    <p> Type a value in the Fahrenheit or Celsius text field</p>
+       
+    <form>
+    <div class="fields">
+      <label>Fahrenheit</label>
+      <input class="field-input" id="inputFahrenheit"  type="number" min="-459.66999999999996" placeholder="Fahrenheit" oninput="temperatureConverter(this.id,this.value)" onchange="temperatureConverter(this.id,this.value)">
+    </div>
+    <div class="fields">
+      <label>Celsius</label>
+      <input class="field-input" id="inputCelsius" type="number" min="-273.15" placeholder="Celsius" oninput="temperatureConverter(this.id,this.value)" onchange="temperatureConverter(this.id,this.value)">
+    </div>
+    <div class="clear-field">
+      <button type="reset" value="reset">Reset</button>
+    </div>
+    </form>
+  </div>
+
+
+<script>
+function temperatureConverter(source,valNum) {
+  valNum = parseFloat(valNum);
+  var inputFahrenheit = document.getElementById("inputFahrenheit");
+  var inputCelsius = document.getElementById("inputCelsius");
+  if (source=="inputFahrenheit") {
+    inputCelsius.value=((valNum-32)/1.8).toFixed(2);
+  }
+  if (source=="inputCelsius") {
+    inputFahrenheit.value=((valNum*1.8)+32).toFixed(2);
+  }
+}
+</script>
+
+
+{%endblock%}

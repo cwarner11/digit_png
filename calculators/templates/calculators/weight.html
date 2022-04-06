@@ -1,0 +1,39 @@
+{%extends 'base_layout.html'%}
+
+{%block content%}
+
+  <div class="calc-function">
+    <img src="{{calcs.thumb.url}}"/>
+    <p> Type a value in the Pounds or Kilograms text field</p>
+    <form>
+    <div class="fields">
+      <label>Pounds</label>
+      <input class="field-input" id="inputPounds" type="number" placeholder="Pounds" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+    </div>
+    <div class="fields">
+      <label>Kilograms</label>
+      <input class="field-input" id="inputKilograms" type="number" placeholder="Kilograms" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+    </div>
+     <div class="clear-field">
+      <button type="reset" value="reset">Reset</button>
+    </div>
+    </form>
+  
+  </div>
+
+<script>
+function weightConverter(source,valNum) {
+  valNum = parseFloat(valNum);
+  var inputPounds = document.getElementById("inputPounds");
+  var inputKilograms = document.getElementById("inputKilograms");
+  if (source=="inputPounds") {
+    inputKilograms.value=(valNum/2.2046).toFixed(2);
+  }
+  if (source=="inputKilograms") {
+    inputPounds.value=(valNum*2.2046).toFixed(2);
+  }
+  
+}
+</script>
+
+{%endblock%}
