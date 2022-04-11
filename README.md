@@ -14,3 +14,10 @@ or if youre using python3 run
 copy the http link on teh command line
 
 create an account, and then tour the application
+
+Getting into admin backend:
+
+http://127.0.0.1:8000/admin
+
+username: admin1
+password: admin123
