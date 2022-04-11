@@ -3,7 +3,7 @@ body{
 	background-image: url(musicbackground.jpg);
 	background-repeat: no-repeat;
 	background-size: 100%;
-	color: #000;
+	color: rgb(255, 255, 255);
 }
 
 body *{
@@ -17,7 +17,7 @@ h1,h2,h3,h4,h5{
 }
 
 a, a:hover,a:visited{
-	color: #000;
+	color: rgb(255, 255, 255);
 	text-decoration: none;
 }
 
@@ -51,7 +51,7 @@ nav li{
 
 nav button{
 	background: none;
-	color: #000;
+	color: rgb(255, 255, 255);
 	cursor: pointer;
 	border: 0;
 	font-size:1em;
@@ -59,7 +59,7 @@ nav button{
 
 .clear-field button{
 	background: white;
-	color: #000;
+	color: rgb(255, 255, 255);
 	cursor: pointer;
 	border: 1;
 	font-size:1em;
