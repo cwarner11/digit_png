@@ -12,11 +12,17 @@ def calculators_list(request):
 def calculator_detail(request,slug):
 	calcs = Calculator.objects.get(slug=slug)
 	
-	if calcs.slug == 'weight-calculator':
-		return render(request, 'calculators/weight.html',{'calcs':calcs})
-	elif calcs.slug == 'temperature-calculator':
-		return render(request, 'calculators/temp.html',{'calcs':calcs})
-	elif calcs.slug == 'length-calculator':
-		return render(request, 'calculators/length.html',{'calcs':calcs})
+	if calcs.slug == 'producer':
+		return render(request, 'calculators/producer.html',{'calcs':calcs})
+	elif calcs.slug == 'label':
+		return render(request, 'calculators/label.html',{'calcs':calcs})
+	elif calcs.slug == 'artist':
+		return render(request, 'calculators/artist.html',{'calcs':calcs}) # 'folder_name/html_page'
+	elif calcs.slug == 'songs':
+		return render(request, 'calculators/song.html',{'calcs':calcs})
+	elif calcs.slug == 'genre':
+		return render(request, 'calculators/genre.html',{'calcs':calcs})
+	elif calcs.slug == 'album':
+		return render(request, 'calculators/album.html',{'calcs':calcs})
 	else:
 		return render(request, 'calculators/calculators_detail.html',{'calcs':calcs})
