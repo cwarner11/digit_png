@@ -2,6 +2,13 @@
 
 Needs to be edited
 
+Before running this server, you will need to download:
+
+The latest version of Python - https://www.python.org/downloads/
+
+The latest version of Django - https://www.djangoproject.com/download/
+
+The latest version of Pillow - https://pypi.org/project/Pillow/#files
 
 To run this server; in your computers terminal, cd into the folder that contains manage.py file. Then run 
 
