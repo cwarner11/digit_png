@@ -1,0 +1,17 @@
+{%extends 'base_layout.html'%}
+
+{%block content%}
+	<h1>All Pages, Needs Work</h1>
+	<div class = 'pages'>
+	{% for page in page %}
+		<div class= 'page'>
+			<h2 >
+				<a href="{%url 'pages:detail' slug=page.slug%}"> 
+					{{page.title}} 
+					<img  class="list-img" src="{{page.thumb.url}}"/>
+				</a>
+			</h2>
+		</div>
+	{%endfor%}
+	</div>
+{%endblock%}

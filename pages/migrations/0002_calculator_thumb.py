@@ -6,12 +6,12 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('calculators', '0001_initial'),
+        ('pages', '0001_initial'),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='calculator',
+            model_name='page',
             name='thumb',
             field=models.ImageField(blank=True, default='default.png', upload_to=''),
         ),

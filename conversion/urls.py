@@ -19,12 +19,12 @@ from .import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf.urls.static import static
 from django.conf import settings
-from calculators import views as calculator_views
+from pages import views as page_views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('calculators/', include('calculators.urls')),
+    path('pages/', include('pages.urls')),
     path('accounts/', include('accounts.urls')),
     path('', views.homepage, name = 'home'),
 ]

@@ -67,25 +67,25 @@ nav button{
 	margin-top: 5px;
 }
 
-.calculators{
+.pages{
 	display:grid;
 	grid-template-columns:1fr 1fr 1fr;
 	grid-gap: 30px
 }
 
-.calculator{
+.page{
 	padding: 10px;
 	position: relative;
 	padding-bottom:40px;
 	text-align: center;
 }
 
-.calculator h2{
+.page h2{
 	font-size: 1.3em;
 	
 }
 
-.calc-function{
+.page-function{
 	text-align: center;
 	font-size: 1.2em;
 	
